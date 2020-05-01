@@ -27,9 +27,9 @@ const Dogg = ({ getPictures, dogg, isFetching, error }) => {
 
   const mapStateToProps = state => {
     return {
-      dogg: state.dogg,
-      isFetching: state.isFetching,
-      error: state.error
+      dogg: state.doggReducer.dogg,
+      isFetching: state.doggReducer.isFetching,
+      error: state.doggReducer.error
     };
   };
   

@@ -8,7 +8,7 @@ const Quotes = ({ getQuote, quote, isFetching, error }) => {
     return (
       <div>
         <h2>{error}</h2>
-        <button onClick={getQuote}>Load New Cat Fact</button>
+        <button onClick={getQuote}>Load New Quote</button>
       </div>
     );
 
@@ -17,8 +17,8 @@ const Quotes = ({ getQuote, quote, isFetching, error }) => {
   } else {
     return (
       <div>
-        <button onClick={getQuote}>Load New Cat Fact</button>
-        <h2>Cat Fact: {quote}</h2>
+        <button className='button' onClick={getQuote}>Load New Quote</button>
+        <h2>{quote}</h2>
       </div>
     );
   }
@@ -26,9 +26,9 @@ const Quotes = ({ getQuote, quote, isFetching, error }) => {
 
 const mapStateToProps = state => {
   return {
-    quote: state.quote,
-    isFetching: state.isFetching,
-    error: state.error
+    quote: state.quoteReducer.quote,
+    isFetching: state.quoteReducer.isFetching,
+    error: state.quoteReducer.error
   };
 };
 

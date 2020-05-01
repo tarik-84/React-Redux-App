@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <h1>My Redux Project</h1>
       <Dogg />
-      {/* <Quote /> */}
+      <Quote />
     </div>
   );
 }
